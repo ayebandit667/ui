@@ -25,7 +25,7 @@ end
 local args = {...}
 local theme
 local rounding
-local animSpeed = 1e-12
+local animSpeed = 0
 
 -- theme 
 do
