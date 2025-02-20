@@ -23,7 +23,7 @@ end
 
 -- ui config shit
 local args = {...}
-local theme = grape
+local theme
 local rounding
 local animSpeed = 1e-12
 
@@ -40,31 +40,31 @@ do
         if (typeof(theme) == 'string') then
             if (theme == 'cherry') then          -- red
                 theme = {
-                    Primary = Color3.fromRGB(249, 22, 52);
-                    Secondary = Color3.fromRGB(247, 22, 149);
+                    Primary = Color3.fromRGB(134, 53, 255);
+                    Secondary = Color3.fromRGB(211, 53, 255);
                     
-                    Window1 = Color3.fromRGB(11, 11, 11);
-                    Window2 = Color3.fromRGB(5, 5, 5);
-                    Window3 = Color3.fromRGB(8, 8, 8);
+                    Window1 = Color3.fromRGB(20, 20, 20);
+                    Window2 = Color3.fromRGB(10, 10, 10);
+                    Window3 = Color3.fromRGB(15, 15, 15);
                     
-                    Button1 = Color3.fromRGB(12, 12, 12);
-                    Button2 = Color3.fromRGB(15, 15, 15);
-                    Button3 = Color3.fromRGB(21, 21, 21);
-                    Button4 = Color3.fromRGB(24, 24, 24);
+                    Button1 = Color3.fromRGB(15, 15, 15);
+                    Button2 = Color3.fromRGB(20, 20, 20);
+                    Button3 = Color3.fromRGB(35, 35, 35);
+                    Button4 = Color3.fromRGB(40, 40, 40);
                     
-                    Stroke = Color3.fromRGB(30, 30, 30);
-                    StrokeHover = Color3.fromRGB(83, 23, 31);
+                    Stroke = Color3.fromRGB(34, 34, 34);
+                    StrokeHover = Color3.fromRGB(89, 49, 150);
                     
-                    Inset1 = Color3.fromRGB(3, 3, 3);
-                    Inset2 = Color3.fromRGB(1, 1, 1);
-                    Inset3 = Color3.fromRGB(2, 2, 2);
+                    Inset1 = Color3.fromRGB(5, 5, 5);
+                    Inset2 = Color3.fromRGB(0, 0, 0);
+                    Inset3 = Color3.fromRGB(3, 3, 3);
                     
                     TextPrimary = Color3.fromRGB(255, 255, 255);
                     TextStroke = Color3.fromRGB(0, 0, 0);
-                    TextDim = Color3.fromRGB(164, 164, 164);
+                    TextDim = Color3.fromRGB(74, 42, 122);
                     
                     ControlGradient1 = Color3.fromRGB(255, 255, 255);
-                    ControlGradient2 = Color3.fromRGB(200, 200, 200);
+                    ControlGradient2 = Color3.fromRGB(192, 192, 192);
                 }
             elseif (theme == 'orange') then      -- orange
                 theme = {
