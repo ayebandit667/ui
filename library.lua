@@ -991,7 +991,7 @@ do
                     local icon = Instance.new('ImageLabel') do 
                         icon.BackgroundTransparency = 1
                         icon.BorderSizePixel = 0
-                        icon.Image = ''
+                        icon.Image = 'rbxassetid://10152328589'
                         icon.ImageColor3 = Color3.fromRGB(255, 255, 255)
                         icon.ImageTransparency = 0
                         icon.Name = '#icon'
@@ -1044,7 +1044,7 @@ do
                     pageRegion.Name = '#page-region'
                     --pageRegion.Position = UDim2.new(0.25, 1, 0, 27)
                     --pageRegion.Size = UDim2.new(0.75, -1, 1, -27)
-                    pageRegion.Position = UDim2.new(0.25, 1, 0, 27)
+                    pageRegion.Position = UDim2.new(0, 126, 0, 27)
                     pageRegion.Size = UDim2.new(1, -126, 1, -27)
                     pageRegion.Visible = true
                     pageRegion.ZIndex = 30
