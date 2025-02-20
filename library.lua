@@ -519,7 +519,7 @@ local hint = {} do
                 shadow.AnchorPoint = Vector2.new(0.5, 0.5)
                 shadow.BackgroundTransparency = 1
                 shadow.BorderSizePixel = 0 
-                shadow.Image = ''
+                shadow.Image = 'rbxassetid://7331400934'
                 shadow.ImageColor3 = Color3.fromRGB(0, 0, 5)
                 shadow.Name = '#shadow'
                 shadow.Position = UDim2.fromScale(0.5, 0.5)
@@ -792,7 +792,7 @@ do
                     shadow.AnchorPoint = Vector2.new(0.5, 0.5)
                     shadow.BackgroundTransparency = 1
                     shadow.BorderSizePixel = 0 
-                    shadow.Image = ''
+                    shadow.Image = 'rbxassetid://7331400934'
                     shadow.ImageColor3 = Color3.fromRGB(0, 0, 5)
                     shadow.Name = '#shadow'
                     shadow.Position = UDim2.fromScale(0.5, 0.5)
