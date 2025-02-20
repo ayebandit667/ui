@@ -1108,7 +1108,7 @@ do
                     sideBar.Name = '#sidebar'
                     sideBar.Position = UDim2.fromOffset(0, 27)
                     --sideBar.Size = UDim2.new(0.25, 0, 1, -27)
-                    sideBar.Size = UDim2.new(0.25, 0, 1, -27)
+                    sideBar.Size = UDim2.new(0, 125, 1, -27)
                     sideBar.Visible = true
                     sideBar.ZIndex = 50
                     sideBar.Parent = mainFrame
@@ -1125,7 +1125,7 @@ do
 
                     
                     local menu = Instance.new('ScrollingFrame') do 
-                        menu.AutomaticCanvasSize = 'Y'
+                        menu.AutomaticCanvasSize = 'X'
                         menu.BackgroundTransparency = 1
                         menu.BorderSizePixel = 0
                         menu.BottomImage = 'rbxassetid://9416839567'
@@ -1136,7 +1136,7 @@ do
                         menu.ScrollBarImageColor3 = Color3.fromRGB(255, 255, 255)
                         menu.ScrollBarImageTransparency = 0.9
                         menu.ScrollBarThickness = 1
-                        menu.ScrollingDirection = 'Y'
+                        menu.ScrollingDirection = 'X'
                         menu.ScrollingEnabled = true
                         menu.Size = UDim2.new(1, -2, 1, -2)
                         menu.TopImage = 'rbxassetid://9416839567'
