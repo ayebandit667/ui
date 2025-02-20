@@ -1223,10 +1223,9 @@ do
             }
             
             
-            --destroy ui
-            local UserInputService = game:GetService("UserInputService")
-
+            
             window.destroy = function(self) 
+                
                 if (ui.autoDisableToggles) then 
                     for _, menu in ipairs(self.menus) do 
                         for _, section in ipairs(menu.sections) do 
@@ -1240,7 +1239,7 @@ do
                                         if (pwin.chromaCon) then 
                                             pwin.chromaCon:Disconnect()
                                         end
-                                        pwin:bindToEvent('close', nil)
+                                        pwin:bindToEvent('close',nil)
                                         pwin:destroy()
                                     end
                                 elseif (control.class == 'toggle') then 
@@ -1252,21 +1251,21 @@ do
                         end
                     end
                 end
-            
-                if self.gui then
-                    self.gui:Destroy()
+
+                local function toggleUI()
+                    if window.gui then
+                        window.gui.Enabled = not window.gui.Enabled
+                    end
                 end
-            end
-            --viteck moment
-            UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-                if input.KeyCode == Enum.KeyCode.RightShift and not gameProcessedEvent then
-                    window:destroy()
-                end
-            end)
-            
+                
+                UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+                    if input.KeyCode == Enum.KeyCode.RightShift and not gameProcessedEvent then
+                        toggleUI()
+                    end
+                end)
+                
                 local mainFrame = self.instances.mainFrame
                 task.spawn(function()
-                    --tween(mainFrame, {Position = UDim2.new(0, mainFrame.AbsolutePosition.X, 1, mainFrame.AbsoluteSize.Y)}, 1, 1)
                     local animCon
                     
                     task.spawn(function() 
