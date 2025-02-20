@@ -1252,18 +1252,6 @@ do
                     end
                 end
 
-                local function toggleUI()
-                    if window.gui then
-                        window.gui.Enabled = not window.gui.Enabled
-                    end
-                end
-                
-                UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-                    if input.KeyCode == Enum.KeyCode.RightShift and not gameProcessedEvent then
-                        toggleUI()
-                    end
-                end)
-                
                 local mainFrame = self.instances.mainFrame
                 task.spawn(function()
                     local animCon
