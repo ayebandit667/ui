@@ -880,7 +880,7 @@ do
                         buttonClose.Size = UDim2.fromOffset(20, 20)
                         buttonClose.Visible = true
                         buttonClose.ZIndex = 52 
-                        buttonClose.Text = 'X'
+                        buttonClose.Text = ''
                         
                         buttonClose.Parent = titleBar
                         
@@ -1111,6 +1111,7 @@ do
                     sideBar.Size = UDim2.new(0, 125, 1, -27)
                     sideBar.Visible = true
                     sideBar.ZIndex = 50
+                    
                     sideBar.Parent = mainFrame
                     
                     local stroke = Instance.new('UIStroke') do 
@@ -1251,9 +1252,9 @@ do
                         end
                     end
                 end
-
                 local mainFrame = self.instances.mainFrame
                 task.spawn(function()
+                    --tween(mainFrame, {Position = UDim2.new(0, mainFrame.AbsolutePosition.X, 1, mainFrame.AbsoluteSize.Y)}, 1, 1)
                     local animCon
                     
                     task.spawn(function() 
