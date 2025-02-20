@@ -40,31 +40,31 @@ do
         if (typeof(theme) == 'string') then
             if (theme == 'cherry') then          -- red
                 theme = {
-                    Primary = Color3.fromRGB(134, 53, 255);
-                    Secondary = Color3.fromRGB(211, 53, 255);
+                    Primary = Color3.fromRGB(249, 22, 52);
+                    Secondary = Color3.fromRGB(247, 22, 149);
                     
-                    Window1 = Color3.fromRGB(20, 20, 20);
-                    Window2 = Color3.fromRGB(10, 10, 10);
-                    Window3 = Color3.fromRGB(15, 15, 15);
+                    Window1 = Color3.fromRGB(11, 11, 11);
+                    Window2 = Color3.fromRGB(5, 5, 5);
+                    Window3 = Color3.fromRGB(8, 8, 8);
                     
-                    Button1 = Color3.fromRGB(15, 15, 15);
-                    Button2 = Color3.fromRGB(20, 20, 20);
-                    Button3 = Color3.fromRGB(35, 35, 35);
-                    Button4 = Color3.fromRGB(40, 40, 40);
+                    Button1 = Color3.fromRGB(12, 12, 12);
+                    Button2 = Color3.fromRGB(15, 15, 15);
+                    Button3 = Color3.fromRGB(21, 21, 21);
+                    Button4 = Color3.fromRGB(24, 24, 24);
                     
-                    Stroke = Color3.fromRGB(34, 34, 34);
-                    StrokeHover = Color3.fromRGB(89, 49, 150);
+                    Stroke = Color3.fromRGB(30, 30, 30);
+                    StrokeHover = Color3.fromRGB(83, 23, 31);
                     
-                    Inset1 = Color3.fromRGB(5, 5, 5);
-                    Inset2 = Color3.fromRGB(0, 0, 0);
-                    Inset3 = Color3.fromRGB(3, 3, 3);
+                    Inset1 = Color3.fromRGB(3, 3, 3);
+                    Inset2 = Color3.fromRGB(1, 1, 1);
+                    Inset3 = Color3.fromRGB(2, 2, 2);
                     
                     TextPrimary = Color3.fromRGB(255, 255, 255);
                     TextStroke = Color3.fromRGB(0, 0, 0);
-                    TextDim = Color3.fromRGB(74, 42, 122);
+                    TextDim = Color3.fromRGB(164, 164, 164);
                     
                     ControlGradient1 = Color3.fromRGB(255, 255, 255);
-                    ControlGradient2 = Color3.fromRGB(192, 192, 192);
+                    ControlGradient2 = Color3.fromRGB(200, 200, 200);
                 }
             elseif (theme == 'orange') then      -- orange
                 theme = {
@@ -244,7 +244,7 @@ do
     
     
     if (rounding == nil) then
-        rounding = true 
+        rounding = false 
     end
     if (typeof(theme) ~= 'table') then
         theme = {
@@ -389,7 +389,7 @@ local tooltip = {} do
                 titleBar.BorderMode = 'Inset'
                 titleBar.Name = '#title-bar'
                 titleBar.Size = UDim2.new(1, 2, 0, 16)
-                titleBar.Position = UDim2.fromOffset(-1, 0)
+                titleBar.Position = UDim2.fromOffset(0, 0)
                 titleBar.Visible = true
                 titleBar.ZIndex = 3801
                 
