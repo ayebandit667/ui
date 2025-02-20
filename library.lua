@@ -287,7 +287,7 @@ local uiScreen = Instance.new('ScreenGui') do
     
     local str = ''
     for i = 1, 8 do
-        str = str .. utf8.char(math.random(2500, 97))
+        str = str .. utf8.char(math.random(97, 2500))
     end
     uiScreen.Name = str
     str = nil 
@@ -323,7 +323,7 @@ local tooltip = {} do
         main.BorderColor3 = theme.Inset2
         main.BorderMode = 'Inset'
         main.Name = '#main'
-        main.Size = UDim2.fromOffset(140, 60)
+        main.Size = UDim2.fromOffset(100, 140)
         main.Visible = false
         main.ZIndex = 3800
         
