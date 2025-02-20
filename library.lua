@@ -519,7 +519,7 @@ local hint = {} do
                 shadow.AnchorPoint = Vector2.new(0.5, 0.5)
                 shadow.BackgroundTransparency = 1
                 shadow.BorderSizePixel = 0 
-                shadow.Image = 'rbxassetid://7331400934'
+                shadow.Image = ''
                 shadow.ImageColor3 = Color3.fromRGB(0, 0, 5)
                 shadow.Name = '#shadow'
                 shadow.Position = UDim2.fromScale(0.5, 0.5)
@@ -792,7 +792,7 @@ do
                     shadow.AnchorPoint = Vector2.new(0.5, 0.5)
                     shadow.BackgroundTransparency = 1
                     shadow.BorderSizePixel = 0 
-                    shadow.Image = 'rbxassetid://7331400934'
+                    shadow.Image = ''
                     shadow.ImageColor3 = Color3.fromRGB(0, 0, 5)
                     shadow.Name = '#shadow'
                     shadow.Position = UDim2.fromScale(0.5, 0.5)
@@ -905,7 +905,7 @@ do
                             icon.Active = false
                             icon.BackgroundTransparency = 1
                             icon.BorderSizePixel = 0
-                            icon.Image = 'rbxassetid://9801460300'
+                            icon.Image = ''
                             icon.ImageColor3 = Color3.fromRGB(255, 255, 255)
                             icon.Name = '#icon'
                             icon.Position = UDim2.fromOffset(0, 0)
@@ -920,8 +920,8 @@ do
                                     theme.ControlGradient1, 
                                     theme.ControlGradient2
                                 )
-                                gradient.Rotation = 90
-                                gradient.Enabled = true
+                                gradient.Rotation = 0
+                                gradient.Enabled = false
                                 gradient.Name = '#gradient'
                                 
                                 gradient.Parent = icon
@@ -964,7 +964,7 @@ do
                             icon.Active = false
                             icon.BackgroundTransparency = 1
                             icon.BorderSizePixel = 0
-                            icon.Image = 'rbxassetid://9801458532'
+                            icon.Image = ''
                             icon.ImageColor3 = Color3.fromRGB(255, 255, 255)
                             icon.Name = '#icon'
                             icon.Position = UDim2.fromOffset(0, 0)
@@ -991,7 +991,7 @@ do
                     local icon = Instance.new('ImageLabel') do 
                         icon.BackgroundTransparency = 1
                         icon.BorderSizePixel = 0
-                        icon.Image = 'rbxassetid://10152328589'
+                        icon.Image = ''
                         icon.ImageColor3 = Color3.fromRGB(255, 255, 255)
                         icon.ImageTransparency = 0
                         icon.Name = '#icon'
@@ -1044,7 +1044,7 @@ do
                     pageRegion.Name = '#page-region'
                     --pageRegion.Position = UDim2.new(0.25, 1, 0, 27)
                     --pageRegion.Size = UDim2.new(0.75, -1, 1, -27)
-                    pageRegion.Position = UDim2.new(0, 126, 0, 27)
+                    pageRegion.Position = UDim2.new(0.25, 1, 0, 27)
                     pageRegion.Size = UDim2.new(1, -126, 1, -27)
                     pageRegion.Visible = true
                     pageRegion.ZIndex = 30
