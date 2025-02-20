@@ -905,7 +905,7 @@ do
                             icon.Active = false
                             icon.BackgroundTransparency = 1
                             icon.BorderSizePixel = 0
-                            icon.Image = ''
+                            icon.Image = 'rbxassetid://9801460300'
                             icon.ImageColor3 = Color3.fromRGB(255, 255, 255)
                             icon.Name = '#icon'
                             icon.Position = UDim2.fromOffset(0, 0)
@@ -920,8 +920,8 @@ do
                                     theme.ControlGradient1, 
                                     theme.ControlGradient2
                                 )
-                                gradient.Rotation = 0
-                                gradient.Enabled = false
+                                gradient.Rotation = 90
+                                gradient.Enabled = true
                                 gradient.Name = '#gradient'
                                 
                                 gradient.Parent = icon
