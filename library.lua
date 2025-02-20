@@ -1108,10 +1108,9 @@ do
                     sideBar.Name = '#sidebar'
                     sideBar.Position = UDim2.fromOffset(0, 27)
                     --sideBar.Size = UDim2.new(0.25, 0, 1, -27)
-                    sideBar.Size = UDim2.new(0, 125, 1, -27)
+                    sideBar.Size = UDim2.new(0.25, 0, 1, -27)
                     sideBar.Visible = true
                     sideBar.ZIndex = 50
-                    
                     sideBar.Parent = mainFrame
                     
                     local stroke = Instance.new('UIStroke') do 
