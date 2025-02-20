@@ -25,7 +25,7 @@ end
 local args = {...}
 local theme
 local rounding
-local animSpeed = 0
+local animSpeed = 1e-12
 
 -- theme 
 do
@@ -389,7 +389,7 @@ local tooltip = {} do
                 titleBar.BorderMode = 'Inset'
                 titleBar.Name = '#title-bar'
                 titleBar.Size = UDim2.new(1, 2, 0, 16)
-                titleBar.Position = UDim2.fromOffset(0, 0)
+                titleBar.Position = UDim2.fromOffset(-1, 0)
                 titleBar.Visible = true
                 titleBar.ZIndex = 3801
                 
@@ -413,12 +413,12 @@ local tooltip = {} do
                     title.Size = UDim2.fromScale(1, 1)
                     title.Text = 'tooltip'
                     title.TextColor3 = theme.TextPrimary
-                    title.TextSize = 14
+                    title.TextSize = 13
                     title.TextStrokeColor3 = theme.TextStroke
                     title.TextStrokeTransparency = 0.8
                     title.TextTransparency = 0
                     title.TextWrapped = false
-                    title.TextXAlignment = 'Left'
+                    title.TextXAlignment = 'Center'
                     title.TextYAlignment = 'Center'
                     title.Visible = true
                     title.ZIndex = 3801
