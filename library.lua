@@ -1125,7 +1125,7 @@ do
 
                     
                     local menu = Instance.new('ScrollingFrame') do 
-                        menu.AutomaticCanvasSize = 'X'
+                        menu.AutomaticCanvasSize = 'Y'
                         menu.BackgroundTransparency = 1
                         menu.BorderSizePixel = 0
                         menu.BottomImage = 'rbxassetid://9416839567'
@@ -1136,7 +1136,7 @@ do
                         menu.ScrollBarImageColor3 = Color3.fromRGB(255, 255, 255)
                         menu.ScrollBarImageTransparency = 0.9
                         menu.ScrollBarThickness = 1
-                        menu.ScrollingDirection = 'X'
+                        menu.ScrollingDirection = 'Y'
                         menu.ScrollingEnabled = true
                         menu.Size = UDim2.new(1, -2, 1, -2)
                         menu.TopImage = 'rbxassetid://9416839567'
@@ -1223,9 +1223,10 @@ do
             }
             
             
-            
+            --destroy ui
+            local UserInputService = game:GetService("UserInputService")
+
             window.destroy = function(self) 
-                
                 if (ui.autoDisableToggles) then 
                     for _, menu in ipairs(self.menus) do 
                         for _, section in ipairs(menu.sections) do 
@@ -1239,7 +1240,7 @@ do
                                         if (pwin.chromaCon) then 
                                             pwin.chromaCon:Disconnect()
                                         end
-                                        pwin:bindToEvent('close',nil)
+                                        pwin:bindToEvent('close', nil)
                                         pwin:destroy()
                                     end
                                 elseif (control.class == 'toggle') then 
@@ -1251,6 +1252,18 @@ do
                         end
                     end
                 end
+            
+                if self.gui then
+                    self.gui:Destroy()
+                end
+            end
+            --viteck moment
+            UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+                if input.KeyCode == Enum.KeyCode.RightShift and not gameProcessedEvent then
+                    window:destroy()
+                end
+            end)
+            
                 local mainFrame = self.instances.mainFrame
                 task.spawn(function()
                     --tween(mainFrame, {Position = UDim2.new(0, mainFrame.AbsolutePosition.X, 1, mainFrame.AbsoluteSize.Y)}, 1, 1)
