@@ -339,7 +339,7 @@ local tooltip = {} do
                 shadow.AnchorPoint = Vector2.new(0.5, 0.5)
                 shadow.BackgroundTransparency = 1
                 shadow.BorderSizePixel = 0 
-                shadow.Image = 'rbxassetid://7331400934'
+                shadow.Image = ''
                 shadow.ImageColor3 = Color3.fromRGB(0, 0, 5)
                 shadow.Name = '#shadow'
                 shadow.Position = UDim2.fromScale(0.5, 0.5)
@@ -880,7 +880,7 @@ do
                         buttonClose.Size = UDim2.fromOffset(20, 20)
                         buttonClose.Visible = true
                         buttonClose.ZIndex = 52 
-                        buttonClose.Text = ''
+                        buttonClose.Text = 'X'
                         
                         buttonClose.Parent = titleBar
                         
