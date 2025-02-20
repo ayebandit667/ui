@@ -3,7 +3,6 @@ local renderService = game:GetService('RunService')
 local tweenService = game:GetService('TweenService')
 local guiService = game:GetService('GuiService')
 
--- tween(object, {Property = 'value'}, 0.2, 1)
 local tween
 do
     local styleEnum = Enum.EasingStyle
@@ -21,13 +20,11 @@ do
     end
 end
 
--- ui config shit
 local args = {...}
 local theme
 local rounding
 local animSpeed = 1e-12
 
--- theme 
 do
     if (#args > 0 and typeof(args[1]) == 'table') then
         local settings = args[1]
@@ -278,12 +275,10 @@ do
 end
 
 
--- screen gui 
 local uiScreen = Instance.new('ScreenGui') do 
     uiScreen.OnTopOfCoreBlur = true
     uiScreen.DisplayOrder = 9e9
     uiScreen.ZIndexBehavior = 'Global'
-    
     
     local str = ''
     for i = 1, 8 do
@@ -418,7 +413,7 @@ local tooltip = {} do
                     title.TextStrokeTransparency = 0.8
                     title.TextTransparency = 0
                     title.TextWrapped = false
-                    title.TextXAlignment = 'Center'
+                    title.TextXAlignment = 'Left'
                     title.TextYAlignment = 'Center'
                     title.Visible = true
                     title.ZIndex = 3801
@@ -443,7 +438,7 @@ local tooltip = {} do
                 menu.BorderSizePixel = 1
                 menu.ClipsDescendants = true 
                 menu.Name = '#menu'
-                menu.Position = UDim2.fromOffset(-1, 17)
+                menu.Position = UDim2.fromOffset(0, 0)
                 menu.Size = UDim2.new(1, 2, 1, -16)
                 menu.Visible = true
                 menu.ZIndex = 3801
@@ -4516,7 +4511,7 @@ do
                                 icon.Active = false
                                 icon.BackgroundTransparency = 1
                                 icon.BorderSizePixel = 0
-                                icon.Image = 'rbxassetid://9801456486'
+                                icon.Image = ''
                                 icon.ImageColor3 = theme.Secondary
                                 icon.Name = '#icon'
                                 icon.Position = UDim2.fromOffset(0, 0)
@@ -4556,7 +4551,7 @@ do
                 
                 
                 if (newState) then
-                    icon.Image = 'rbxassetid://9801457539'
+                    icon.Image = ''
                     tween(icon, {
                         Rotation = 0,
                         ImageColor3 = theme.Primary
@@ -4571,7 +4566,7 @@ do
                     
                     self:fireEvent('onEnable')
                 else
-                    icon.Image = 'rbxassetid://9801456486'
+                    icon.Image = ''
                     tween(icon, {
                         Rotation = 360,
                         ImageColor3 = theme.Secondary
@@ -4599,7 +4594,7 @@ do
                 local toggle = self.instances.toggle
                 local icon = toggle['#icon']
 
-                icon.Image = 'rbxassetid://9801457539'
+                icon.Image = ''
                 tween(icon, {
                     Rotation = 0,
                     ImageColor3 = theme.Primary
@@ -4624,7 +4619,7 @@ do
                 local toggle = self.instances.toggle
                 local icon = toggle['#icon']
                 
-                icon.Image = 'rbxassetid://9801456486'
+                icon.Image = ''
                 tween(icon, {
                     Rotation = 360,
                     ImageColor3 = theme.Secondary
@@ -4833,7 +4828,7 @@ do
                                     icon.Active = false
                                     icon.BackgroundTransparency = 1
                                     icon.BorderSizePixel = 0
-                                    icon.Image = 'rbxassetid://9801455339'
+                                    icon.Image = ''
                                     icon.ImageColor3 = Color3.fromRGB(255, 255, 255)
                                     icon.Name = '#icon'
                                     icon.Position = UDim2.fromOffset(0, 0)
@@ -6250,7 +6245,7 @@ do
                         main.LayoutOrder = 50
                         main.Name = '#notif-frame'
                         main.Size = UDim2.fromOffset(175, 100)
-                        main.Visible = true
+                        main.Visible = false
                         main.ZIndex = 3000
                     end
                     
@@ -6266,7 +6261,7 @@ do
                         backgroundFrame.BorderSizePixel = 0 
                         backgroundFrame.Name = '#background'
                         backgroundFrame.Size = UDim2.fromScale(1, 1)
-                        backgroundFrame.Visible = true 
+                        backgroundFrame.Visible = false 
                         backgroundFrame.ZIndex = 2999
                         
                         backgroundFrame.Parent = trim
@@ -6284,7 +6279,7 @@ do
                         shadow.AnchorPoint = Vector2.new(0.5, 0.5)
                         shadow.BackgroundTransparency = 1
                         shadow.BorderSizePixel = 0 
-                        shadow.Image = 'rbxassetid://7331400934'
+                        shadow.Image = ''
                         shadow.ImageColor3 = Color3.fromRGB(0, 0, 5)
                         shadow.Name = '#shadow'
                         shadow.Position = UDim2.fromScale(0.5, 0.5)
@@ -6363,7 +6358,7 @@ do
                         local icon = Instance.new('ImageLabel') do 
                             icon.BackgroundTransparency = 1
                             icon.BorderSizePixel = 0
-                            icon.Image = 'rbxassetid://9865915364'
+                            icon.Image = ''
                             icon.ImageColor3 = theme.Primary
                             icon.ImageTransparency = 0
                             icon.Name = '#icon'
@@ -6388,7 +6383,7 @@ do
                             title.TextScaled = false
                             title.TextSize = 17
                             title.TextStrokeColor3 = theme.TextStroke
-                            title.TextStrokeTransparency = 0.8 -- tstroke 
+                            title.TextStrokeTransparency = 0.8  
                             title.TextTransparency = 0
                             title.TextXAlignment = 'Left'
                             title.TextYAlignment = 'Center'
@@ -6655,7 +6650,7 @@ do
                     local kc = io.KeyCode.Name
                     if (kc == 'Unknown' or kc == 'Escape') then 
                         self.hotkey = nil
-                        display.Text = '[None]'
+                        display.Text = 'None'
                         self.inputCon:Disconnect()
                         self.inputCon = nil 
                         
