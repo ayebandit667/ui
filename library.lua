@@ -4510,7 +4510,7 @@ do
                                 icon.Active = false
                                 icon.BackgroundTransparency = 1
                                 icon.BorderSizePixel = 0
-                                icon.Image = 'rbxassetid://134557155652757'
+                                icon.Image = 'rbxassetid://8474763404'
                                 icon.ImageColor3 = theme.Secondary
                                 icon.Name = '#icon'
                                 icon.Position = UDim2.fromOffset(0, 0)
