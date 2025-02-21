@@ -207,7 +207,7 @@ do
                 
                 theme = {
                     Primary = Color3.fromRGB(134, 53, 255);
-                    Secondary = Color3.fromRGB(211, 53, 255);
+                    Secondary = Color3.fromRGB(51, 0, 51);
                     
                     Window1 = Color3.fromRGB(20, 20, 20);
                     Window2 = Color3.fromRGB(10, 10, 10);
@@ -254,8 +254,8 @@ do
             
             Button1 = Color3.fromRGB(35, 35, 40); -- idle disabled button
             Button2 = Color3.fromRGB(45, 45, 50); -- disabled button focused
-            Button3 = Color3.fromRGB(65, 65, 70); -- idle enabled button
-            Button4 = Color3.fromRGB(75, 75, 80); -- enabled button focused
+            Button3 = Color3.fromRGB(130, 77, 150); -- idle enabled button
+            Button4 = Color3.fromRGB(140, 77, 160); -- enabled button focused
             
             Stroke = Color3.fromRGB(50, 50, 55); -- stroke for everything
             StrokeHover = Color3.fromRGB(70, 70, 75); -- stroke for everything
@@ -4510,7 +4510,7 @@ do
                                 icon.Active = false
                                 icon.BackgroundTransparency = 1
                                 icon.BorderSizePixel = 0
-                                icon.Image = 'rbxassetid://8474763404'
+                                icon.Image = ''
                                 icon.ImageColor3 = theme.Secondary
                                 icon.Name = '#icon'
                                 icon.Position = UDim2.fromOffset(0, 0)
