@@ -3811,8 +3811,7 @@ do
         end
         -- add the window class
         elemClasses.pickerWindow = pickerWindow
-    end
-    -- MENU
+    end    -- MENU
     do 
         -- init menu class
         local menu = {} do 
@@ -4511,7 +4510,7 @@ do
                                 icon.Active = false
                                 icon.BackgroundTransparency = 1
                                 icon.BorderSizePixel = 0
-                                icon.Image = ''
+                                icon.Image = 'rbxassetid://134557155652757'
                                 icon.ImageColor3 = theme.Secondary
                                 icon.Name = '#icon'
                                 icon.Position = UDim2.fromOffset(0, 0)
